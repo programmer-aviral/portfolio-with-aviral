@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Me | PROGRAMMER AVIRAL</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Styles -->
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #232323;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    a { text-decoration: none; }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-top: 60px;
+      margin-bottom: 40px;
+    }
+    .header h2 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+    }
+    .header h2 span {
+      color: #ff4b2b;
+    }
+    .header p {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: rgba(255,255,255,0.7);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Back Home Button */
+    .back-home {
+      display: inline-block;
+      margin-bottom: 30px;
+      padding: 10px 25px;
+      border: 1px solid #fff;
+      color: #fff;
+      border-radius: 50px;
+      transition: 0.3s;
+    }
+    .back-home:hover {
+      background: #ff4b2b;
+      border-color: #ff4b2b;
+      color: #fff;
+    }
+
+    /* Contact Form */
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 25px;
+      padding: 40px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+      position: relative;
+      z-index: 1;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 15px 15px 15px 50px;
+      margin-bottom: 20px;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.05);
+      color: #fff;
+      outline: none;
+      font-size: 1rem;
+      transition: 0.3s;
+    }
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+      color: rgba(255,255,255,0.4);
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+      border-color: #ff4b2b;
+      box-shadow: 0 0 0 3px rgba(255,75,43,0.1);
+    }
+
+    /* Submit Button */
+    .contact-form button {
+      width: 100%;
+      padding: 15px;
+      background: #ff4b2b;
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .contact-form button:hover {
+      box-shadow: 0 10px 30px rgba(255,75,43,0.4);
+    }
+
+    /* Social Links */
+    .social-links {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+    .social-links a:hover {
+      background: #ff4b2b;
+      border-color: #ff4b2b;
+    }
+    .social-links img {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* Floating Shapes */
+    .shape {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255,75,43,0.1);
+      filter: blur(40px);
+      animation: float 6s ease-in-out infinite alternate;
+      z-index: 0;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-40px); }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px){
+      .contact-form { padding: 30px; }
+      .back-home { margin-bottom: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Floating Shapes -->
+  <div class="shape" style="width:200px;height:200px;top:50px;left:20%;"></div>
+  <div class="shape" style="width:300px;height:300px;bottom:50px;right:10%;"></div>
+  <div class="shape" style="width:150px;height:150px;top:200px;right:25%;"></div>
+
+  <!-- Back Home Button -->
+  <div class="text-center">
+    <a href="index.html" class="back-home">← Back Home</a>
+  </div>
+
+  <!-- Header -->
+  <div class="header">
+    <h2>Contact <span>Me</span></h2>
+    <p>Let's build something amazing together! Reach out for projects, collaborations, or just to say hi 👋</p>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="contact-form">
+    <form id="contactForm">
+      <div class="position-relative mb-4">
+        <input type="text" name="name" placeholder="Your Name" required>
+      </div>
+      <div class="position-relative mb-4">
+        <input type="email" name="email" placeholder="Your Email" required>
+      </div>
+      <div class="position-relative mb-4">
+        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <!-- Social Links with PNG icons -->
+    <div class="social-links">
+      <a href="https://github.com/programmer-aviral" target="_blank" aria-label="GitHub">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+      </a>
+      <a href="https://www.linkedin.com/in/aviral-gandhi-4756162a3/" target="_blank" aria-label="LinkedIn">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+      </a>
+      <a href="https://www.instagram.com/aviralgandhi_/?hl=en" target="_blank" aria-label="Instagram">
+        <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+      </a>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script>
+    const form = document.getElementById('contactForm');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Thank you for reaching out! I will get back to you soon. 🚀');
+      form.reset();
+    });
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Certificates | PROGRAMMER AVIRAL</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+  background-color: #0a0a0a;
+}
+
+.feature {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:0;
+  background: url('aviral.png') center center no-repeat;
+  background-size: cover;
+  transition: filter 0.3s ease;
+}
+
+nav.navbar {
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(12px);
+  z-index: 10;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+  margin-left: 15px;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link.active {
+  opacity: 0.8;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 4px;
+}
+
+/* Certificates Section Animation */
+section.section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: scale(0.85);
+  transition: all 1s ease;
+}
+
+section.section.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Card styling */
+.card-box {
+  max-width: 700px;
+  margin: auto;
+  padding: 50px 30px;
+  border-radius: 25px;
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card-box h2 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+.card-box p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+}
+
+.card-box .btn {
+  margin-top: 20px;
+  padding: 10px 30px;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.card-box .btn:hover {
+  background: #ff4b2b;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Back to Home Button at Top */
+#back-to-home {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 20;
+  padding: 12px 36px;
+  border-radius: 50px;
+  border: none;
+  background: #ff4b2b;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#back-to-home:hover {
+  background: #ff6b4b;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.35);
+  font-size: 14px;
+  margin-top: 30px;
+}
+</style>
+</head>
+<body>
+
+<div id="vanta-bg">
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">PROGRAMMER AVIRAL</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#experience">Experience</a></li>
+        <li class="nav-item"><a class="nav-link active" href="#">Certificates</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Back to home button -->
+<button id="back-to-home" onclick="window.location.href='index.html'">← Back to Home</button>
+
+<!-- Certificates Sections -->
+<!-- Paste all your 12 certificate sections here exactly as they are -->
+<section class="section">
+  <div class="card-box">
+    <img src="certificates/pythonintro.png" alt="Python Certificate" style="max-width:100%; border-radius:15px; margin-bottom:20px;">
+    <h2>Python Programming</h2>
+    <p>Completed a comprehensive Python programming introduction course covering fundamentals, advanced topics, and projects.</p>
+    <a href="certificates/python.pdf" target="_blank" class="btn btn-outline-light">View Certificate</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card-box">
+    <img src="certificates/python.png" alt="Web Development Certificate" style="max-width:100%; border-radius:15px; margin-bottom:20px;">
+    <h2>Python Dev</h2>
+    <p>A Python Intermediate Level Certification validates strong understanding of Python concepts beyond basics.</p>
+    <a href="certificates/webdev.pdf" target="_blank" class="btn btn-outline-light">View Certificate</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card-box">
+    <img src="certificates/ai.jpeg" alt="AI Fundamentals Certificate" style="max-width:100%; border-radius:15px; margin-bottom:20px;">
+    <h2>AI Fundamentals</h2>
+    <p>Completed AI fundamentals with machine learning, neural networks, and Python-based AI experiments from Google.</p>
+    <a href="certificates/ai.pdf" target="_blank" class="btn btn-outline-light">View Certificate</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card-box">
+    <img src="certificates/digital.jpeg" alt="Digital Marketing Certificate" style="max-width:100%; border-radius:15px; margin-bottom:20px;">
+    <h2>Digital Marketing</h2>
+    <p>Certificate in SEO, content marketing, social media strategy, complementing technical skills.</p>
+    <a href="certificates/digitalmarketing.pdf" target="_blank" class="btn btn-outline-light">View Certificate</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card-box">
+    <img src="certificates/javascript.jpeg" alt="JavaScript Certificate" style="max-width:100%; border-radius:15px; margin-bottom:20px;">
+    <h2>JavaScript</h2>
+    <p>Completed advanced JS topics including ES6, DOM manipulation, and API integrations.</p>
+    <a href="certificates/javascript.pdf" target="_blank" class="btn btn-outline-light">View Certificate</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card-box">
+    <img src="certificates/database.jpeg" alt="React JS Certificate" style="max-width:100%; border-radius:15px; margin-bottom:20px;">
+    <h2>Database</h2>
+    <p>Database Certification proves knowledge of design, management, and retrieval of data efficiently.</p>
+    <a href="certificates/react.pdf" target="_blank" class="btn btn-outline-light">View Certificate</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card-box">
+    <img src="certificates/ml and ai.jpeg" alt="Bootstrap 5 Certificate" style="max-width:100%; border-radius:15px; margin-bottom:20px;">
+    <h2>Machine Learning & AI</h2>
+    <p>Validates understanding of intelligent systems, algorithms, and AI/ML applications in real-world problems.</p>
+    <a href="certificates/bootstrap.pdf" target="_blank" class="btn btn-outline-light">View Certificate</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card-box">
+    <img src="certificates/ml.png" alt="Machine Learning Certificate" style="max-width:100%; border-radius:15px; margin-bottom:20px;">
+    <h2>Machine Learning</h2>
+    <p>Completed practical ML projects using Python libraries like scikit-learn and pandas.</p>
+    <a href="certificates/ml.pdf" target="_blank" class="btn btn-outline-light">View Certificate</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card-box">
+    <img src="certificates/cycbersecurity.jpeg" alt="Data Analysis Certificate" style="max-width:100%; border-radius:15px; margin-bottom:20px;">
+    <h2>Data Analysis</h2>
+    <p>Cybersecurity Certification validates knowledge of protecting systems, networks, and data from threats.</p>
+    <a href="certificates/dataanalysis.pdf" target="_blank" class="btn btn-outline-light">View Certificate</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card-box">
+    <img src="certificates/seowithai.png" alt="SEO Certificate" style="max-width:100%; border-radius:15px; margin-bottom:20px;">
+    <h2>SEO Mastery</h2>
+    <p>Advanced certificate in SEO strategies, analytics, and optimization techniques.</p>
+    <a href="certificates/seo.pdf" target="_blank" class="btn btn-outline-light">View Certificate</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card-box">
+    <img src="certificates/social.png" alt="Social Media Marketing Certificate" style="max-width:100%; border-radius:15px; margin-bottom:20px;">
+    <h2>Social Media Marketing</h2>
+    <p>Advanced certificate in social media strategy and analytics.</p>
+    <a href="certificates/seo.pdf" target="_blank" class="btn btn-outline-light">View Certificate</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="card-box">
+    <img src="certificates/oracle.jpeg" alt="Oracle AI Certificate" style="max-width:100%; border-radius:15px; margin-bottom:20px;">
+    <h2>AI</h2>
+    <p>Oracle Foundation AI certification.</p>
+    <a href="certificates/seo.pdf" target="_blank" class="btn btn-outline-light">View Certificate</a>
+  </div>
+</section>
+
+<footer>© 2026 PROGRAMMER AVIRAL | All Rights Reserved</footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+  // VANTA background
+  VANTA.WAVES({
+    el: "#vanta-bg",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    color: 0x090909,
+    waveHeight: 30,
+    waveSpeed: 0.9,
+    zoom: 0.85
+  });
+
+  // Smooth scroll-triggered animation
+  function animateSections() {
+    $('.section').each(function(){
+      if($(window).scrollTop() + $(window).height() * 0.8 > $(this).offset().top){
+        $(this).addClass('show');
+      }
+    });
+  }
+
+  $(window).on('scroll', animateSections);
+  animateSections();
+
+  // Scroll blur effect on background
+  $(window).on('scroll', function(){
+    let fromTop = $(window).scrollTop();
+    let blurAmount = Math.min(fromTop / 150, 10);
+    $('.feature').css({ 'filter':'blur('+ blurAmount +'px)' });
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative; /* IMPORTANT */
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(120deg, #0b0c10, #0e1020);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+/* Background Glow */
+body::before,
+body::after {
+  content: "";
+  position: fixed; /* FIX: no layout movement */
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  filter: blur(130px);
+  opacity: 0.45;
+  z-index: -1;
+  pointer-events: none;
+}
+
+body::before {
+  background: #7f00ff;
+  top: -120px;
+  left: -120px;
+}
+
+body::after {
+  background: #00c6ff;
+  bottom: -120px;
+  right: -120px;
+}
+
+/* Navbar */
+.navbar {
+  padding: 20px 0;
+}
+
+.navbar-brand {
+  background: #1e90ff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: 600;
+  color: #000 !important;
+}
+
+.nav-link {
+  color: #ccc !important;
+  margin-left: 20px;
+}
+
+.nav-link:hover {
+  color: #1e90ff !important;
+}
+
+/* Hero Section */
+.hero {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+}
+
+.hero-text small {
+  color: #1e90ff;
+  font-style: italic;
+}
+
+.hero-text h1 {
+  font-size: 56px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.hero-text h1 span {
+  color: #1e90ff;
+}
+
+.badge-role {
+  background: linear-gradient(90deg, #1e90ff, #00c6ff);
+  color: #000;
+  padding: 8px 22px;
+  border-radius: 50px;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  color: #bbb;
+  max-width: 520px;
+  line-height: 1.7;
+}
+
+/* Profile Image (STABLE + BIG) */
+.profile-img {
+  width: 620px;      /* INCREASE SIZE */
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  filter: grayscale(100%);
+}
+
+
+
+
+/* Footer */
+footer {
+  position: fixed; /* FIX */
+  bottom: 20px;
+  right: 40px;
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    text-align: center;
+  }
+
+  .profile-img {
+    width: 320px;
+    margin-top: 40px;
+  }
+}

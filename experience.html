@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Experience | PROGRAMMER AVIRAL</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<style>
+body, html {
+  margin:0; padding:0; font-family:'Poppins', sans-serif; background:#232323; color:#fff; overflow-x:hidden;
+}
+
+/* Background effect for certificates */
+.feature {
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  z-index:0;
+  background: url('exp/bg.jpg') center center no-repeat;
+  background-size: cover;
+  box-shadow: 0 -50px 20px -20px #232323 inset;
+  transition: filter 0.3s ease;
+}
+
+/* Container */
+.container {
+  position: relative;
+  z-index:1;
+  padding: 100px 20px;
+  max-width:1200px;
+  margin:0 auto;
+  text-align:center;
+}
+
+/* Heading */
+h1 {
+  margin-bottom: 50px;
+  font-size:3rem;
+}
+
+/* Cards */
+.card {
+  background: rgba(255,255,255,0.05);
+  padding: 30px;
+  margin: 20px auto;
+  border-radius: 20px;
+  max-width: 600px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+  opacity:0;
+  transform: translateY(40px);
+  transition: all 1s ease;
+}
+
+.card.show {
+  opacity:1;
+  transform: translateY(0);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  margin-bottom: 15px;
+}
+
+.card p {
+  opacity:0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.card p.show {
+  opacity:1;
+  transform: translateY(0);
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 25px;
+  border-radius: 50px;
+  color: #fff;
+  border: 1px solid #fff;
+  text-decoration: none;
+  transition: all 0.3s;
+  opacity:0;
+  transform: translateY(30px);
+}
+
+.card a.show {
+  opacity:1;
+  transform: translateY(0);
+}
+
+.card a:hover {
+  background: #ff4b2b;
+  border-color: #ff4b2b;
+}
+
+/* Full-page Read More overlay */
+.overlay {
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.95);
+  color:#fff;
+  overflow-y:auto;
+  z-index:9999;
+  display:none;
+  padding: 80px 20px;
+}
+
+.overlay-content {
+  max-width:900px;
+  margin:0 auto;
+  text-align:left;
+}
+
+.overlay-content h2 {
+  font-size:2.5rem;
+  margin-bottom:20px;
+}
+
+.overlay-content p {
+  line-height:1.8;
+  margin-bottom:20px;
+}
+
+.close-overlay {
+  display:inline-block;
+  margin-bottom:30px;
+  padding:10px 25px;
+  border:1px solid #fff;
+  border-radius:50px;
+  cursor:pointer;
+  transition: all 0.3s;
+}
+
+.close-overlay:hover {
+  background:#ff4b2b;
+  border-color:#ff4b2b;
+}
+
+@media(max-width:768px){
+  h1 { font-size:2.2rem; }
+  .overlay-content h2 { font-size:2rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="feature"></div>
+
+<div class="container">
+  <h1>My Experience</h1>
+
+  <!-- Card 1 -->
+  <div class="card">
+    <img src="exp/hack.jpeg" alt="Experience Image">
+    <h2>Mumbai Hackathon 2025</h2>
+    <p>Participated in a high-energy innovation event, developing impactful solutions with AI and Python.</p>
+    <a href="#" class="read-more" data-content="internship">Read More</a>
+  </div>
+
+  <!-- Card 2 -->
+  <div class="card">
+    <img src="exp/tech.jpg" alt="Experience Image">
+    <h2>Technology Job Simulation</h2>
+    <p>Simulated real-world technology projects to strengthen problem-solving and collaboration skills.</p>
+    <a href="#" class="read-more" data-content="hackathon">Read More</a>
+  </div>
+
+  <!-- Card 3 -->
+  <div class="card">
+    <img src="exp/avi.jpeg" alt="Experience Image">
+    <h2>Toastmasters Certificate</h2>
+    <p>Enhanced public speaking, communication, and leadership skills through structured programs.</p>
+    <a href="#" class="read-more" data-content="freelance1">Read More</a>
+  </div>
+
+  <!-- Card 4 -->
+  <div class="card">
+    <img src="exp/aws.jpg" alt="Experience Image">
+    <h2>AWS Cloud Projects</h2>
+    <p>Worked on cloud deployment, CI/CD pipelines, and server-side automation using AWS services.</p>
+    <a href="#" class="read-more" data-content="cloud">Read More</a>
+  </div>
+
+  <!-- Card 5 -->
+  <div class="card">
+    <img src="exp/cyberjob.jpg" alt="Experience Image">
+    <h2>Cybersecurity Simulations</h2>
+    <p>Conducted security audits, vulnerability assessments, and learned best practices for web security.</p>
+    <a href="#" class="read-more" data-content="cyber">Read More</a>
+  </div>
+</div>
+
+<!-- Overlay for Read More -->
+<div class="overlay" id="overlay">
+  <div class="overlay-content" id="overlay-content">
+    <span class="close-overlay" id="close-overlay">Close</span>
+    <h2 id="overlay-title"></h2>
+    <p id="overlay-text"></p>
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+
+  // Scroll animation for cards
+  function animateCards() {
+    $('.card').each(function(){
+      if($(this).offset().top < $(window).scrollTop() + $(window).height() - 100){
+        $(this).addClass('show');
+        $(this).find('p').addClass('show');
+        $(this).find('a').addClass('show');
+      }
+    });
+  }
+  $(window).on('scroll', animateCards);
+  animateCards(); // trigger on load
+
+  // Overlay content
+  const contentData = {
+    internship: {
+      title:"Mumbai Hackathon 2025",
+      text:"Participated in Mumbai Hackathon 2025, a high-energy innovation event bringing together creative coders and problem-solvers from across the country. Developed impactful solutions using AI and Python, collaborated with talented teams, and learned rapid prototyping, teamwork, and solution delivery under tight deadlines. The event inspired creativity, innovation, and skill enhancement."
+    },
+    hackathon: {
+      title:"Technology Job Simulation",
+      text:"Completed a technology job simulation program, designed to mimic real-world projects. Improved problem-solving, collaboration, and project management skills by tackling practical scenarios, implementing solutions, and receiving feedback on performance and workflow efficiency."
+    },
+    freelance1: {
+      title:"Toastmasters Certificate",
+      text:"Earned the Toastmasters certificate by participating in structured programs that improved public speaking, communication, and leadership abilities. Gained confidence to present ideas clearly and lead small teams effectively."
+    },
+    cloud: {
+      title:"AWS Cloud Projects",
+      text:"Worked on AWS cloud projects involving deployment, CI/CD pipelines, and server-side automation. Learned about cloud architecture, scalability, and best practices for building and maintaining cloud-based applications."
+    },
+    cyber: {
+      title:"Cybersecurity Simulations",
+      text:"Handled cybersecurity simulations, including vulnerability assessments, penetration testing, and security audits. Developed knowledge of web application security, risk mitigation, and best practices to maintain secure systems."
+    }
+  };
+
+  // Show overlay on Read More
+  $('.read-more').click(function(e){
+    e.preventDefault();
+    let key = $(this).data('content');
+    $('#overlay-title').text(contentData[key].title);
+    $('#overlay-text').text(contentData[key].text);
+    $('#overlay').fadeIn();
+    $('body').css('overflow','hidden');
+  });
+
+  // Close overlay
+  $('#close-overlay').click(function(){
+    $('#overlay').fadeOut();
+    $('body').css('overflow','auto');
+  });
+
+  // Blur background on scroll
+  $(window).on('scroll', function(){
+    let fromTop = $(window).scrollTop();
+    let blurAmount = Math.min(fromTop / 100, 10);
+    $('.feature').css({
+      'filter':'blur('+ blurAmount +'px)',
+      '-webkit-filter':'blur('+ blurAmount +'px)'
+    });
+  });
+
+});
+</script>
+
+</body>
+</html>
